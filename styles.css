@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: myFont;
+}
+@font-face {
+  font-family: myFont;
+  src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: hsl(210, 60%, 98%);
+  word-spacing: 2px;
+  color: hsl(219, 12%, 42%);
+  font-weight: 500;
+  font-size: 16px;
+}
+.card {
+  background: hsl(0, 0%, 100%);
+  margin: 50px 30px;
+  width: 60%;
+  padding: 30px 30px;
+  border-radius: 10px;
+}
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.card-title span:first-child {
+  color: hsl(224, 21%, 14%);
+  font-size: 20px;
+  font-weight: 1000;
+  position: relative;
+}
+.card-title span:first-child::after {
+  position: absolute;
+  content: "3";
+  margin-left: 10px;
+  background: hsl(219, 85%, 26%);
+  border: 1px solid hsl(219, 85%, 26%);
+  border-radius: 5px;
+  width: 30px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+.card-title span:last-child {
+  color: hsl(224, 21%, 14%);
+  cursor: pointer;
+}
+.card-title span:last-child:hover {
+  color: hsl(219, 85%, 26%);
+}
+.box {
+  padding: 30px 30px 30px 80px;
+  margin: 10px 0px;
+  position: relative;
+}
+.box img {
+  position: absolute;
+  width: 40px;
+  left: 20px;
+}
+.blue {
+  border-radius: 10px;
+  background: hsl(210, 60%, 98%);
+  border: solid 1px hsl(210, 60%, 98%);
+  position: relative;
+}
+.blue::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: hsl(1, 90%, 64%);
+  border-radius: 100%;
+  right: 98px;
+  bottom: 53px;
+}
+.blue:nth-of-type(3):after {
+  left: 290px;
+}
+.blue:nth-of-type(4):after {
+  left: 485px;
+}
+.box span:first-of-type {
+  font-weight: 1000;
+  color: hsl(224, 21%, 14%);
+  cursor: pointer;
+}
+.box span:first-of-type:hover {
+  color: hsl(219, 85%, 26%);
+}
+.box span:last-of-type {
+  color: hsl(219, 14%, 63%);
+}
+.box-child {
+  margin: 10px 10px 0px -1px;
+  border: solid 1px hsl(219, 14%, 63%);
+  padding: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.box-child:hover {
+  background: hsl(210, 70%, 96%);
+  border: solid 1px hsl(210, 70%, 96%);
+}
+#kim {
+  position: absolute;
+  width: 40px;
+  left: 650px;
+  top: 30px;
+  cursor: pointer;
+}
+#kim:hover {
+  box-shadow: 0px 0px 5px 0px hsl(219, 85%, 26%);
+}
+#tour,
+#game {
+  color: hsl(219, 12%, 42%);
+  font-weight: 700;
+}
+#tour:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+#chess {
+  color: hsl(219, 85%, 26%);
+  font-weight: 1000;
+  cursor: pointer;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(219, 82%, 46%);
+}
+.attribution {
+  margin-bottom: 10px;
+  text-align: center;
+}
+@media only screen and (min-width: 320px) and (max-width:480px){
+  body{
+    width: 100vw;
+  }
+  .container{
+    background: hsl(0, 0%, 100%);
+    font-size: 13px;
+    width: 100%;
+  }
+  .card{
+    background: transparent;
+    width: 100%;
+    padding: 20px 15px;
+  }
+  .card-title span:first-child {
+    color: hsl(224, 21%, 14%);
+    font-size: 16px;
+  }
+  .card-title span:first-child::after {
+    width: 28px;
+    font-size: 16px;
+  }
+  .box {
+    padding: 20px 20px 20px 70px;
+  }
+  .box img {
+    width: 35px;
+  }
+  .blue::after {
+    width: 8px;
+    height: 8px;
+    right: 50px;
+    bottom: 40px;
+  }
+  .blue:nth-of-type(3):after {
+    left: 240px;
+  }
+  .blue:nth-of-type(4):after {
+    left: 190px;
+  }
+  .box-child {
+    padding: 15px;
+  }
+  #kim {
+    width: 30px;
+    left: 315px;
+    top: 20px;
+  }
+  #name{
+    padding: 0px 7px 0px 0px;
+  }
+}
+@media only screen and (width:320px) {
+  #kim{
+    left: 255px;
+    width: 30px;
+  }
+  #name{
+    padding: 0px 1px 0px 0px;
+  }
+  .blue::after {
+    right: 82px;
+    bottom: 40px;
+  }
+  .blue:nth-of-type(3):after {
+    left: 240px;
+  }
+  .blue:nth-of-type(4):after {
+    left: 225px;
+  }
+}
+@media only screen and (min-width:414px)and (max-width:434px) {
+  .blue::after {
+    right: 170px;
+    bottom: 40px;
+  }
+  .blue:nth-of-type(4):after {
+    left: 105px;
+  }
+  @media only screen and (max-width:320px) {
+    #kim{
+      left: 20px;
+    }
+  }
+}
